@@ -29,7 +29,7 @@ function App() {
             <img
               src={eu}
               alt="wtf"
-              height="100%"
+              height="200px"
               style={{
                 borderRadius: "10px 0 0 10px"
               }}
@@ -198,7 +198,7 @@ function App() {
           </div>
         </div>
         <div style={{ fontSize: "12px", paddingTop: 25 }}>
-          Desenvolvido por Gabriel Negrão Silva.
+          ©2020 All rights reserved. Desenvolvido por Gabriel Negrão Silva.
         </div>
       </foorter>
     </div>
