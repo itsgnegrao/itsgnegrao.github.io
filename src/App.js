@@ -4,7 +4,6 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
 import eu from "./images/eu.png";
 
 function App() {
@@ -44,23 +43,77 @@ function App() {
               borderRadius: "0 10px 10px 10px",
               borderColor: "#566285",
               width: "75%",
-              paddingLeft: "10px"
+              paddingLeft: "10px",
+              paddingRight: "10px"
             }}
           >
-            <h5 align="left">Gabriel Negrão Silva, 24 Anos, Solteiro.</h5>
-            <div align="left">TEste3</div>
-            <div align="left">TEste4</div>
-            <div align="left">TEste4</div>
-            <div align="left">TEste4</div>
-            <div align="left">TEste4</div>
-            <div align="left">TEste4</div>
-            <div align="left">TEste4</div>
-            <div align="left">TEste4</div>
-            <div align="left">TEste4</div>
-            <div align="left">TEste4</div>
-            <div align="left">TEste4</div>
-            <div align="left">TEste6</div>
-            <div align="left">TEste4</div>
+            <h5 align="left">
+              Gabriel Negrão Silva, 24 Anos, Campo Mourão - Pr.
+            </h5>
+            <div align="left" style={{ fontSize: "20px" }}>
+              Atualmente estou cursando o último ano da faculdade de Bacharelado
+              em Ciência da Computação pela Universidade Tecnológica Federal do
+              Paraná no campus de Campo Mourão. Tenho como área de pesquisa em
+              minha graduação a Mineração de Dados de contribuição com Software
+              Livre utilizando uma base de dados obtidos do GitHub.
+              <br />
+              <br />
+              Sou um profissional com fome de conhecimento e com habilidades em
+              áreas distintas o que me torna um profissional com fácil adaptação
+              a ambientes, tecnologias e equipes. Tenho como gosto pessoal
+              trabalhar com Back-End, áreas que envolvem programação em baixo
+              nível e sou entusiasta em Dispositivos Microcontrolados (Arduino,
+              ESP8266).
+            </div>
+            <div style={{ fontSize: "20px" }}>
+              <br />
+              <br />
+              <b>Portfólio</b>
+              <hr color="#566285"></hr>
+            </div>
+            <div
+              style={{
+                fontSize: "20px",
+                display: "flex"
+              }}
+            >
+              <div
+                style={{
+                  width: "33%"
+                }}
+              >
+                <h6>Back-End</h6>
+                <div>TESTE</div>
+                <div>TESTE</div>
+                <div>TESTE</div>
+                <div>TESTE</div>
+                <div>TESTE</div>
+              </div>
+              <div
+                style={{
+                  width: "33%"
+                }}
+              >
+                <h6>Front-End</h6>
+                <div>TESTE2</div>
+                <div>TESTE2</div>
+                <div>TESTE</div>
+                <div>TESTE</div>
+                <div>TESTE</div>
+              </div>
+              <div
+                style={{
+                  width: "33%"
+                }}
+              >
+                <h6>Images Docker</h6>
+                <div>TESTE3TESTE3</div>
+                <div>TESTE3TESTE3</div>
+                <div>TESTE</div>
+                <div>TESTE</div>
+                <div>TESTE</div>
+              </div>
+            </div>
           </div>
         </div>
       </body>
