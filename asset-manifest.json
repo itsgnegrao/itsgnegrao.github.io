@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/itsgnegrao.github.io/static/css/main.5f361e03.chunk.css",
-    "main.js": "/itsgnegrao.github.io/static/js/main.ebe6fdc3.chunk.js",
-    "main.js.map": "/itsgnegrao.github.io/static/js/main.ebe6fdc3.chunk.js.map",
-    "runtime-main.js": "/itsgnegrao.github.io/static/js/runtime-main.23ed70c8.js",
-    "runtime-main.js.map": "/itsgnegrao.github.io/static/js/runtime-main.23ed70c8.js.map",
-    "static/js/2.16ede931.chunk.js": "/itsgnegrao.github.io/static/js/2.16ede931.chunk.js",
-    "static/js/2.16ede931.chunk.js.map": "/itsgnegrao.github.io/static/js/2.16ede931.chunk.js.map",
-    "index.html": "/itsgnegrao.github.io/index.html",
-    "precache-manifest.ab09f07a59bba907e9299b2131e22a88.js": "/itsgnegrao.github.io/precache-manifest.ab09f07a59bba907e9299b2131e22a88.js",
-    "service-worker.js": "/itsgnegrao.github.io/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/itsgnegrao.github.io/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.16ede931.chunk.js.LICENSE.txt": "/itsgnegrao.github.io/static/js/2.16ede931.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/itsgnegrao.github.io/static/media/logo.5d5d9eef.svg"
+    "main.css": "/static/css/main.5f361e03.chunk.css",
+    "main.js": "/static/js/main.c44e1086.chunk.js",
+    "main.js.map": "/static/js/main.c44e1086.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.73157538.js",
+    "runtime-main.js.map": "/static/js/runtime-main.73157538.js.map",
+    "static/js/2.16ede931.chunk.js": "/static/js/2.16ede931.chunk.js",
+    "static/js/2.16ede931.chunk.js.map": "/static/js/2.16ede931.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0fc0202324a15b8f5b43a1db169b5f62.js": "/precache-manifest.0fc0202324a15b8f5b43a1db169b5f62.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.16ede931.chunk.js.LICENSE.txt": "/static/js/2.16ede931.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.23ed70c8.js",
+    "static/js/runtime-main.73157538.js",
     "static/js/2.16ede931.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.ebe6fdc3.chunk.js"
+    "static/js/main.c44e1086.chunk.js"
   ]
 }
