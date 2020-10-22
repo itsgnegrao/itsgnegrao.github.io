@@ -14,25 +14,25 @@ function App() {
         <div
           style={{
             width: "90%",
-            height: "500px",
+            height: "600px",
             display: "flex",
             // background: "black",
-            borderRadius: "20px"
+            borderRadius: "10px"
           }}
         >
           <div
             style={{
-              width: "25%",
-              height: "60%"
+              height: "50%"
               // background: "green"
             }}
+            align="right"
           >
             <img
               src={eu}
               alt="wtf"
-              width="100%"
+              height="100%"
               style={{
-                borderRadius: "20px 0 0 20px"
+                borderRadius: "10px 0 0 10px"
               }}
             />
           </div>
@@ -41,14 +41,25 @@ function App() {
             style={{
               // background: "gray",
               border: "2px solid",
+              borderRadius: "0 10px 10px 10px",
               borderColor: "#566285",
               width: "75%",
-              borderRadius: "0 20px 20px 20px",
               paddingLeft: "10px"
             }}
           >
             <h5 align="left">Gabriel Negrão Silva, 24 Anos, Solteiro.</h5>
             <div align="left">TEste3</div>
+            <div align="left">TEste4</div>
+            <div align="left">TEste4</div>
+            <div align="left">TEste4</div>
+            <div align="left">TEste4</div>
+            <div align="left">TEste4</div>
+            <div align="left">TEste4</div>
+            <div align="left">TEste4</div>
+            <div align="left">TEste4</div>
+            <div align="left">TEste4</div>
+            <div align="left">TEste4</div>
+            <div align="left">TEste6</div>
             <div align="left">TEste4</div>
           </div>
         </div>
@@ -59,6 +70,7 @@ function App() {
         <div style={{ fontSize: "14px", paddingBottom: 2 }}>
           Entre em contato:
         </div>
+
         <div style={{ display: "flex" }}>
           <div
             style={{
@@ -70,8 +82,14 @@ function App() {
               display: "flex"
             }}
           >
-            <GitHubIcon style={{ fontSize: 40 }} />
+            <a
+              href="https://github.com/itsgnegrao"
+              style={{ color: "inherit" }}
+            >
+              <GitHubIcon style={{ fontSize: 40 }} />
+            </a>
           </div>
+
           <div
             style={{
               width: "60px",
@@ -82,8 +100,14 @@ function App() {
               display: "flex"
             }}
           >
-            <LinkedInIcon style={{ fontSize: 40 }} />
+            <a
+              href="https://linkedin.com/in/itsgnegrao"
+              style={{ color: "inherit" }}
+            >
+              <LinkedInIcon style={{ fontSize: 40 }} />
+            </a>
           </div>
+
           <div
             style={{
               width: "60px",
@@ -94,8 +118,14 @@ function App() {
               display: "flex"
             }}
           >
-            <InstagramIcon style={{ fontSize: 40 }} />
+            <a
+              href="https://instagram.com/itsg_negrao"
+              style={{ color: "inherit" }}
+            >
+              <InstagramIcon style={{ fontSize: 40 }} />
+            </a>
           </div>
+
           <div
             style={{
               width: "60px",
@@ -106,19 +136,12 @@ function App() {
               display: "flex"
             }}
           >
-            <TwitterIcon style={{ fontSize: 40 }} />
-          </div>
-          <div
-            style={{
-              width: "60px",
-              height: "60px",
-              background: "black",
-              justifyContent: "center",
-              alignItems: "center",
-              display: "flex"
-            }}
-          >
-            <AlternateEmailIcon style={{ fontSize: 40 }} />
+            <a
+              href="https://twitter.com/itsg_negrao"
+              style={{ color: "inherit" }}
+            >
+              <TwitterIcon style={{ fontSize: 40 }} />
+            </a>
           </div>
         </div>
         <div style={{ fontSize: "12px", paddingTop: 25 }}>
