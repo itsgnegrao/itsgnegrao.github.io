@@ -1,19 +1,24 @@
 {
-  "short_name": "Gabriel Negrão Silva",
-  "name": "Personal page Gabriel Negrão Silva",
+  "short_name": "Gabriel Negrão Silva | Developer",
+  "name": "Personal page of Gabriel Negrão Silva, developer fullstack.",
   "icons": [
     {
       "src": "favicon.png",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "favicon.png",
+      "src": "images/eu.png",
+      "sizes": "64x64 32x32 24x24",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "images/eu.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "favicon.png",
+      "src": "images/eu.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -21,5 +26,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "inherit"
 }
