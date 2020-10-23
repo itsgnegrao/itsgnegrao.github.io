@@ -12,45 +12,33 @@ function App() {
       <body className="App-body">
         <div
           style={{
-            width: "90%",
-            height: "600px",
+            width: "85%",
             display: "flex",
             // background: "black",
-            borderRadius: "10px"
+            borderRadius: "10px",
+            justifyContent: "center"
           }}
         >
-          <div
-            style={{
-              height: "50%"
-              // background: "green"
-            }}
-            align="right"
-          >
-            <img
-              src={eu}
-              alt="wtf"
-              height="200px"
-              style={{
-                borderRadius: "10px 0 0 10px"
-              }}
-            />
+          <div>
+            <img src={eu} alt="wtf" className="img" />
           </div>
 
           <div
             style={{
-              // background: "gray",
               border: "2px solid",
               borderRadius: "0 10px 10px 10px",
               borderColor: "#566285",
               width: "75%",
               paddingLeft: "10px",
-              paddingRight: "10px"
+              paddingRight: "10px",
+              display: "inline-block"
             }}
+            className="text-div"
           >
-            <h5 align="left">
+            <h3 align="left">
               Gabriel Negrão Silva, 24 Anos, Campo Mourão - Pr.
-            </h5>
-            <div align="left" style={{ fontSize: "20px" }}>
+            </h3>
+            <div align="left" className="text-div">
               Atualmente estou cursando o último ano da faculdade de Bacharelado
               em Ciência da Computação pela Universidade Tecnológica Federal do
               Paraná no campus de Campo Mourão. Tenho como área de pesquisa em
@@ -65,7 +53,7 @@ function App() {
               nível e sou entusiasta em Dispositivos Microcontrolados (Arduino,
               ESP8266).
             </div>
-            <div style={{ fontSize: "20px" }}>
+            <div className="text-div">
               <br />
               <br />
               <b>Portfólio</b>
@@ -73,45 +61,59 @@ function App() {
             </div>
             <div
               style={{
-                fontSize: "20px",
                 display: "flex"
               }}
+              className="text-div"
             >
               <div
                 style={{
                   width: "33%"
                 }}
               >
-                <h6>Back-End</h6>
-                <div>TESTE</div>
-                <div>TESTE</div>
-                <div>TESTE</div>
-                <div>TESTE</div>
-                <div>TESTE</div>
+                <h4>Back-End</h4>
+                <a
+                  href="http://itsgnegrao-spring-boot.herokuapp.com/source"
+                  style={{ color: "inherit" }}
+                >
+                  Java + Spring boot
+                </a>
               </div>
               <div
                 style={{
                   width: "33%"
                 }}
               >
-                <h6>Front-End</h6>
-                <div>TESTE2</div>
-                <div>TESTE2</div>
-                <div>TESTE</div>
-                <div>TESTE</div>
-                <div>TESTE</div>
+                <h4>Front-End</h4>
+                <a
+                  href="https://itsgnegrao-react-app.herokuapp.com/"
+                  style={{ color: "inherit" }}
+                >
+                  Javascript + React
+                </a>
               </div>
               <div
                 style={{
                   width: "33%"
                 }}
               >
-                <h6>Images Docker</h6>
-                <div>TESTE3TESTE3</div>
-                <div>TESTE3TESTE3</div>
-                <div>TESTE</div>
-                <div>TESTE</div>
-                <div>TESTE</div>
+                <h4>Images Docker</h4>
+                <div>
+                  <a
+                    href="https://hub.docker.com/r/itsgnegrao/itsgnegrao-spring-boot"
+                    style={{ color: "inherit" }}
+                  >
+                    Java + Spring boot
+                  </a>
+                </div>
+                <span style={{ paddingTop: "5px", display: "block" }} />
+                <div>
+                  <a
+                    href="https://hub.docker.com/r/itsgnegrao/itsgnegrao-react-app"
+                    style={{ color: "inherit" }}
+                  >
+                    Javascript + React
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -119,6 +121,8 @@ function App() {
       </body>
 
       <foorter className="App-footer">
+        {/* <hr color="gray" width="100%"></hr> */}
+
         {/* Siga-me nas minhas redes sociais */}
         <div style={{ fontSize: "14px", paddingBottom: 2 }}>
           Entre em contato:

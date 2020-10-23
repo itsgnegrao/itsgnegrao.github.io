@@ -1,19 +1,26 @@
 .App {
   text-align: center;
+  background-color: #1c1e22;
 }
 
 .App-body {
-  background-color: #282c34;
   min-height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  /* padding-top: calc(2px + 2vmin); */
+  padding-left: calc(2px + 2vmin);
+  padding-right: calc(2px + 2vmin);
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal,
+    monospace;
+  /* color: #0881ba; */
   color: white;
+
+  letter-spacing: -1px;
 }
 .App-footer {
-  background-color: #282c34;
   min-height: 15vh;
   display: flex;
   flex-direction: column;
@@ -21,4 +28,14 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.img {
+  height: calc(50px + 20vmin);
+  border-radius: 10px 0 0 10px;
+}
+
+.text-div {
+  font-size: calc(1px + 2vmin);
+  padding-bottom: 10px;
 }
