@@ -31,6 +31,7 @@ function loadAscii() {
                                                                                     
 `;
     bootOutput.textContent = ascii + '\n\n';
+    bootOutput.classList.add('boot-ascii');
 }
 
 function printBootLine() {

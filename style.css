@@ -4,7 +4,7 @@
     border-radius: 0;
     box-shadow: none;
 }
-/* Matrix rain effect */
+
 .matrix-effect span {
     animation: matrix-fall 0.6s linear;
     opacity: 0.85;
@@ -14,7 +14,6 @@
     100% { opacity: 0.85; }
 }
 
-/* Past (cinema antigo) effect */
 .past-effect {
     filter: grayscale(1) brightness(0.95);
     transition: filter 0.2s;
@@ -25,7 +24,6 @@
     pointer-events: none;
     z-index: 998;
 }
-/* Terminal Hacker Style */
 
 body {
     margin: 0;
@@ -89,7 +87,6 @@ body {
     caret-color: #00ff00;
 }
 
-/* Terminal colors */
 .user { color: #00ff00; }
 .at { color: #ffffff; }
 .host { color: #0000ff; }
@@ -100,7 +97,6 @@ body {
 .output { color: #00ff00; }
 .error { color: #ff0000; }
 
-/* Help styling */
 .help-container {
     margin: 10px 0;
 }
@@ -130,7 +126,6 @@ body {
     font-weight: bold;
 }
 
-/* Scanlines effect */
 .screen::before {
     content: '';
     position: absolute;
@@ -148,7 +143,6 @@ body {
     pointer-events: none;
 }
 
-/* Glitch effect placeholder */
 .glitch {
     animation: glitch 0.3s infinite;
 }
@@ -162,7 +156,6 @@ body {
     100% { transform: translate(0); }
 }
 
-/* Terminal popup styles */
 .terminal-popup {
     position: fixed;
     top: 50%;
@@ -200,7 +193,6 @@ body {
     background: #ff1744;
 }
 
-/* Responsividade para mobile */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -222,9 +214,12 @@ body {
         padding: 4px 12px;
         font-size: 14px;
     }
-    #boot-output {
-        font-size: 10px;
-        line-height: 1;
+    #boot-output.boot-ascii {
+        font-size: 7px;
+        line-height: 1.1;
+        word-break: break-word;
+        white-space: pre-wrap;
+        letter-spacing: -1px;
     }
     #boot-prompt {
         font-size: 14px;
