@@ -184,6 +184,8 @@ function triggerPastEffect() {
         terminalScreen.classList.remove('past-effect');
         borderDiv.remove();
     };
+}
+
 function typewriter(text, element, speed = 50) {
     let i = 0;
     element.textContent = '';
@@ -195,6 +197,8 @@ function typewriter(text, element, speed = 50) {
             clearInterval(timer);
         }
     }, speed);
+
+}
 function setupAutocomplete() {
     const input = document.getElementById('terminal-input');
     input.addEventListener('keydown', function(event) {
@@ -209,17 +213,12 @@ function setupAutocomplete() {
     });
 }
 
-
 function addGlitch(element) {
     element.classList.add('glitch');
     setTimeout(() => {
         element.classList.remove('glitch');
     }, 300);
 }
-
-
-
-
 
 window.addEventListener('load', () => {
     setupAutocomplete();
@@ -287,7 +286,6 @@ function triggerVisualGlitch(messages, finalMessage) {
         }
     }, 60); 
 }
-
 
 function glitchText(text) {
     const glitchChars = ['@', '#', '$', '%', '&', '*', '!', '?', '0', '1', 'Ξ', '░', '▒', '▓', '█', '▄', '▀', '■', '▲', '●', '◼', '∆', '§', '¶', '†', '¥', '¢', '¤', '☠', '☢', '☣', '☯', '☭', '☮', '☾', '☽', '♠', '♣', '♥', '♦', '★', '☆', '✦', '✧', '✩', '✪', '✫', '✬', '✭', '✮', '✯', '✰', '✱', '✲', '✳', '✴', '✵', '✶', '✷', '✸', '✹', '✺', '✻', '✼', '✽', '✾', '✿', '❀', '❁', '❂', '❃', '❄', '❅', '❆', '❇', '❈', '❉', '❊', '❋', '⛧', '⛤', '⛥', '⛦', '⛧', '⛨', '⛩', '⛪', '⛫', '⛬', '⛭', '⛮', '⛯', '⛰', '⛱', '⛲', '⛳', '⛴', '⛵', '⛶', '⛷', '⛸', '⛹', '⛺', '⛻', '⛼', '⛽', '⛾', '⛿'];
