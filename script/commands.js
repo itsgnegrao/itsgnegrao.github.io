@@ -99,6 +99,10 @@ function initCommands() {
     });
     registerCommand('ls', () => {
         printLine('<span style="color:#00ff00">segredo.txt</span>', 'output', true);
+        printLine('<span style="color:#0000ff">/home</span>', 'output', true);
+        printLine('<span style="color:#0000ff">/past</span>', 'output', true);
+        printLine('<span style="color:#0000ff">/dev/null</span>', 'output', true);
+        printLine('<span style="color:#0000ff">/home/negrao</span>', 'output', true);
     });
     registerCommand('cd', async (cmd) => {
         const arg = cmd.split(' ').slice(1).join(' ').trim();
