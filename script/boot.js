@@ -41,14 +41,16 @@ function printBootLine() {
     } else {
         bootPrompt.style.display = 'block';
         document.addEventListener('keydown', handleBootEnter);
+        bootScreen.addEventListener('click', handleBootEnter);
     }
 }
 
 function handleBootEnter(event) {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' || event.type === 'click') {
         bootScreen.classList.add('hidden');
         terminalScreen.classList.remove('hidden');
         document.removeEventListener('keydown', handleBootEnter);
+        bootScreen.removeEventListener('click', handleBootEnter);
         initTerminal();
     }
 }

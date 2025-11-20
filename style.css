@@ -199,3 +199,33 @@ body {
 .popup-close:hover {
     background: #ff1744;
 }
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .screen {
+        padding: 10px;
+    }
+    #terminal-input {
+        min-width: 200px;
+        width: 80vw;
+        font-size: 14px;
+    }
+    .terminal-popup {
+        padding: 20px 30px;
+        min-width: 250px;
+        font-size: 14px;
+    }
+    .popup-close {
+        padding: 4px 12px;
+        font-size: 14px;
+    }
+    #boot-output {
+        font-size: 12px;
+    }
+    #boot-prompt {
+        font-size: 14px;
+    }
+}
