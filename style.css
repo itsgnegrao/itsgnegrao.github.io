@@ -223,7 +223,8 @@ body {
         font-size: 14px;
     }
     #boot-output {
-        font-size: 12px;
+        font-size: 10px;
+        line-height: 1;
     }
     #boot-prompt {
         font-size: 14px;
