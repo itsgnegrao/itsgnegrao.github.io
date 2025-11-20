@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>negrao.dev</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>N</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="boot-screen" class="screen">
+        <div id="boot-output"></div>
+        <div id="boot-prompt">Press ENTER to continue...</div>
+    </div>
+    <div id="terminal-screen" class="screen hidden">
+        <div id="terminal-output"></div>
+        <input type="text" id="terminal-input" autocomplete="off" style="display: none;">
+    </div>
+    <script src="script/boot.js"></script>
+    <script src="script/terminal.js"></script>
+    <script src="script/commands.js"></script>
+    <script src="script/ui-effects.js"></script>
+    <script src="script/data-loader.js"></script>
+</body>
+</html>
