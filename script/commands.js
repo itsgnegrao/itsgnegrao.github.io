@@ -24,6 +24,7 @@ function initCommands() {
                 <ul class="help-list">
                     <li><span class="command-name">ls</span></li>
                     <li><span class="command-name">cd</span></li>
+                    <li><span class="command-name">cat</span></li>
                 </ul>
             </div>
         </div>`, 'output', true);
