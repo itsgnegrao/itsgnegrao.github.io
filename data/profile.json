@@ -1,2 +1,78 @@
 {
+    "name": "Gabriel Negrão Silva",
+    "nacionalidade": "Brasileiro",
+    "idade": 29,
+    "role": "Desenvolvedor Full Stack Sênior",
+    "summary": "Desenvolvedor com mais de 8 anos de experiência, especializado em Back-End, microservices, arquitetura Hexagonal, Limpa e DDD. Forte atuação em Java, Spring, Quarkus, Node.js, e metodologias ágeis.",
+    "contacts": {
+        "github": "https://itsgnegrao.github.io",
+        "linkedin": "https://linkedin.com/in/itsgnegrao/"
+    },
+    "skills": [
+        {"name": "Java", "level": "avançado"},
+        {"name": "Spring (Boot, Data, Batch, Security, Cloud)", "level": "avançado"},
+        {"name": "Quarkus", "level": "avançado"},
+        {"name": "Node.js", "level": "avançado"},
+        {"name": "NestJS", "level": "intermediário"},
+        {"name": "JavaScript", "level": "avançado"},
+        {"name": "TypeScript", "level": "avançado"},
+        {"name": "Angular", "level": "intermediário"},
+        {"name": "VueJS", "level": "intermediário"},
+        {"name": "React", "level": "intermediário"},
+        {"name": "JPA/Hibernate", "level": "avançado"},
+        {"name": "JUnit/Mockito", "level": "avançado"},
+        {"name": "Microservices", "level": "avançado"},
+        {"name": "Arquitetura Hexagonal", "level": "avançado"},
+        {"name": "DDD", "level": "avançado"},
+        {"name": "CQRS", "level": "intermediário"},
+        {"name": "Multitenancia", "level": "intermediário"},
+        {"name": "SQL/PostgreSQL/MySQL/OracleDB/SQL Server", "level": "avançado"},
+        {"name": "Docker", "level": "avançado"},
+        {"name": "Kubernetes", "level": "intermediário"},
+        {"name": "AWS (S3)", "level": "básico"},
+        {"name": "Grafana/Prometheus", "level": "intermediário"},
+        {"name": "Git/GitHub/BitBucket", "level": "avançado"},
+        {"name": "RabbitMQ/Kafka", "level": "intermediário"},
+        {"name": "SOAP/REST API", "level": "avançado"},
+        {"name": "HTML/CSS", "level": "avançado"},
+        {"name": "Arduino/LwM2M", "level": "intermediário"},
+        {"name": "C/C++/C#/Python", "level": "intermediário"}
+    ],
+    "projects": [
+        {
+        "title": "Comming soon",
+        "desc": "Logo será adicionado aqui.",
+        "tags": ["Java", "Spring", "Quarkus", "Kafka", "Docker", "PostgreSQL", "IoT", "Microserviços", "Azure"]
+        }
+    ],
+    "experience": [
+        {
+        "company": "Lyncas.net",
+        "role": "Senior Software Developer",
+        "from": "2020-01",
+        "to": "present",
+        "desc": "Entrevistador Técnico de Java, condução de entrevistas, análise de currículos, avaliação de domínio Java, aplicação de testes práticos, feedback detalhado, desenvolvimento de soluções SaaS IoT, TOTVS Logística, Neogrid Modernização, Porto Itapoá Faturamento, Cia. Hering Inspeção, Cingo CODES."
+        },
+        {
+        "company": "Viptech",
+        "role": "Full Stack/Desenvolvedor Back-End",
+        "from": "2017-01",
+        "to": "2019-12",
+        "desc": "Java Desktop, homologação de rastreadores, desenvolvimento de aplicações Front-End JSF, Android nativo, ReactJS, integração com APIs externas, Spring Boot, PostgreSQL."
+        }
+    ],
+    "education": [
+        {
+        "institution": "Universidade Tecnológica Federal do Paraná",
+        "degree": "Bacharelado em Ciência da Computação",
+        "location": "Campo Mourão PR",
+        "from": "2014-03",
+        "to": "2019-12"
+        }
+    ],
+    "extras": {
+        "ingles": "Técnico",
+        "preferencia": ["Back-End", "Home Office"],
+        "entusiasta_embarcados": "Arduino, ESP8266, ESP32"
+    }
 }

@@ -30,13 +30,17 @@ function loadAscii() {
 |/    )_)(_______/(_______)|/   \\__/|/     \\|(_______)(_)(______/ (_______/   \\_/   
                                                                                     
 `;
-    bootOutput.textContent = ascii + '\n\n';
+    const bannerLines = ascii.split('\n');
+    bootOutput.innerHTML = bannerLines.map(line => `<div class='boot-banner-line'>${line}</div>`).join('') + '<br>';
     bootOutput.classList.add('boot-ascii');
 }
 
 function printBootLine() {
     if (currentLine < bootLines.length) {
-        bootOutput.textContent += bootLines[currentLine] + '\n';
+        const lineDiv = document.createElement('div');
+        lineDiv.className = 'boot-normal-line';
+        lineDiv.textContent = bootLines[currentLine];
+        bootOutput.appendChild(lineDiv);
         currentLine++;
         setTimeout(printBootLine, 500);
     } else {

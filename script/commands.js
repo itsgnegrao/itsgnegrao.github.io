@@ -16,6 +16,7 @@ function initCommands() {
                     <li><span class="command-name">skills</span> - List skills</li>
                     <li><span class="command-name">clear</span> - Clear terminal</li>
                     <li><span class="command-name">reboot</span> - Reboot system</li>
+                    <li><span class="command-name">exit</span> - Exit the terminal</li>
                 </ul>
             </div>
             <div class="help-section">
@@ -29,12 +30,17 @@ function initCommands() {
     });
     registerCommand('about', () => {
         if (window.profile) {
-            printLine(`Name: ${window.profile.name}`);
-            printLine(`Role: ${window.profile.role}`);
-            printLine(`Summary: ${window.profile.summary}`);
-            printLine('Contacts:');
+            printLine(`<span class="profile-key">Name:</span> <span class="profile-value">${window.profile.name}</span>`, 'output', true);
+            printLine(`<span class="profile-key">Idade:</span> <span class="profile-value">${window.profile.idade}</span>`, 'output', true);
+            printLine(`<span class="profile-key">Nacionalidade:</span> <span class="profile-value">${window.profile.nacionalidade}</span>`, 'output', true);
+            printLine(`<span class="profile-key">Role:</span> <span class="profile-value">${window.profile.role}</span>`, 'output', true);
+            printLine(`<span class="profile-key">Summary:</span> <span class="profile-value">${window.profile.summary}</span>`, 'output', true);
+        
             Object.entries(window.profile.contacts).forEach(([key, value]) => {
-                printLine(`  ${key}: ${value}`);
+                const capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
+                const isLink = typeof value === 'string' && (value.startsWith('http://') || value.startsWith('https://'));
+                const valueHtml = isLink ? `<a href="${value}" class="profile-link" target="_blank">${value}</a>` : `<span class="profile-value">${value}</span>`;
+                printLine(`  <span class="profile-key">${capitalizedKey}:</span> ${valueHtml}`, 'output', true);
             });
         } else {
             printLine('Profile not loaded.');
@@ -42,8 +48,11 @@ function initCommands() {
     });
     registerCommand('projects', () => {
         if (window.profile && window.profile.projects) {
-            window.profile.projects.forEach(project => {
-                printLine(`${project.id}: ${project.title}`);
+            window.profile.projects.forEach((project, index) => {
+                printLine(`<span class="project-title">${index + 1}. ${project.title}</span>`, 'output', true);
+                printLine(`<span class="project-desc">${project.desc}</span>`, 'output', true);
+                printLine(`<span class="project-tags">Tags: ${project.tags.join(', ')}</span>`, 'output', true);
+                printLine('', 'output', true); // empty line
             });
         } else {
             printLine('No projects found.');
@@ -52,7 +61,10 @@ function initCommands() {
     registerCommand('skills', () => {
         if (window.profile && window.profile.skills) {
             window.profile.skills.forEach(skill => {
-                printLine(`${skill.name} (${skill.level})`);
+                let levelClass = 'skill-basic';
+                if (skill.level === 'avançado') levelClass = 'skill-advanced';
+                else if (skill.level === 'intermediário') levelClass = 'skill-intermediate';
+                printLine(`<span class="skill-name">${skill.name}</span> <span class="${levelClass}">(${skill.level})</span>`, 'output', true);
             });
         } else {
             printLine('No skills found.');
@@ -71,6 +83,18 @@ function initCommands() {
             window._devNullEffectCleanup = null;
         }
         location.reload();
+    });
+    registerCommand('exit', () => {
+        const popup = document.createElement('div');
+        popup.className = 'terminal-popup';
+        popup.innerHTML = `<div class='popup-content'>
+            <span style='color:#00ff00;font-weight:bold;'>Saindo da pagina do melhor dev que voce ja conheceu!</span>
+            <button class='popup-close' style='margin-left:20px;'>OK</button>
+        </div>`;
+        document.body.appendChild(popup);
+        document.querySelector('.popup-close').onclick = () => {
+            window.location.href = 'https://www.google.com';
+        };
     });
     registerCommand('ls', () => {
         printLine('<span style="color:#00ff00">segredo.txt</span>', 'output', true);
@@ -119,20 +143,10 @@ function initCommands() {
         const arg = cmd.split(' ').slice(1).join(' ').trim();
         if (arg === 'segredo.txt') {
             const messages = [
-                '###@!$%&* ERROR INVADED BY 1337 SYSTEM FAILURE ACCESS GRANTED',
-                'HACK THE PLANET NULL POINTER GLITCH DETECTED 404 NOT FOUND',
-                '¯\\_(ツ)_/¯ 010101010101 Segredo revelado? Terminal corrompido!',
-                '###@!$%&* SYSTEM FAILURE GLITCH DETECTED HACK THE PLANET',
-                'ACCESS GRANTED 404 NOT FOUND INVADED BY 1337 NULL POINTER',
-                'Segredo revelado? Terminal corrompido! ###@!$%&* 010101010101',
-                'GLITCH DETECTED SYSTEM FAILURE HACK THE PLANET ACCESS GRANTED',
-                'INVADED BY 1337 404 NOT FOUND NULL POINTER ###@!$%&*',
-                'ERROR GLITCH DETECTED SYSTEM FAILURE HACK THE PLANET',
-                'ACCESS GRANTED 404 NOT FOUND INVADED BY 1337 NULL POINTER',
-                'Segredo revelado? Terminal corrompido! ###@!$%&* 010101010101',
+                '###@!$%&* ERROR INVADED BY 1337 SYSTEM FAILURE ACCESS GRANTEDHACK THE PLANET NULL POINTER GLITCH DETECTED 404 NOT FOUND¯\\_(ツ)_/¯ 010101010101 Segredo revelado? Terminal corrompido!01010101010101010101##@!$%&##@!$%&##@!$%&10101010101010101010101###@!$%&* SYSTEM FAILURE GLITCH DETECTED HACK THE PLANETACCESS GRANTED 404 NOT FOUND INVADED BY 1337 NULL POINTERSegredo revelado? Terminal corrompido! ###@!$%&* 010101010101010101010101010101010101010101010101010101010101010101010101GLITCH DETECTED SYSTEM FAILURE HACK THE PLANET ACCESS GRANTEDINVADED BY 1337 404 NOT FOUND NULL POINTER ###@!$%&*010101010101010101010101010101010101010101##@!$%&##@!$%&101ERROR GLITCH DETECTED SYSTEM FAILURE HACK THE PLANETACCESS GRANTED 404 NOT FOUND INVADED BY 1337 NULL POINTER01##@!$%&##@!$%&1010101010101010101010101010101010101010101010101Segredo revelado? Terminal corrompido! ###@!$%&* 010101010101',
             ];
             if (window.triggerVisualGlitch) {
-                window.triggerVisualGlitch(messages, 'Você não deveria mexer aqui');
+                window.triggerVisualGlitch(messages, 'Você não deveria mexer onde não deve!', 8000);
             } else {
                 for (let i = 0; i < 80; i++) {
                     printLine(messages[Math.floor(Math.random() * messages.length)], 'error');
@@ -141,7 +155,7 @@ function initCommands() {
                     const popup = document.createElement('div');
                     popup.className = 'terminal-popup';
                     popup.innerHTML = `<div class='popup-content'>
-                        <span style='color:#e53935;font-weight:bold;'>Você não deveria mexer aqui</span>
+                        <span style='color:#e53935;font-weight:bold;'>Você não deveria mexer onde não deve!</span>
                         <button class='popup-close' style='margin-left:20px;'>Fechar</button>
                     </div>`;
                     document.body.appendChild(popup);

@@ -126,6 +126,52 @@ body {
     font-weight: bold;
 }
 
+.profile-key {
+    color: #00aaff;
+    font-weight: bold;
+}
+
+.profile-value {
+    color: #ffffff;
+}
+
+.skill-advanced {
+    color: #00ff00;
+}
+
+.skill-intermediate {
+    color: #ffff00;
+}
+
+.skill-basic {
+    color: #ff8800;
+}
+
+.skill-name {
+    color: #00aaff;
+}
+
+.project-title {
+    color: #00aaff;
+    font-weight: bold;
+}
+
+.project-desc {
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+.project-tags {
+    color: #888888;
+    margin-left: 20px;
+    font-size: 0.9em;
+}
+
+.profile-link {
+    color: #00aaff;
+    text-decoration: underline;
+}
+
 .screen::before {
     content: '';
     position: absolute;
@@ -193,7 +239,7 @@ body {
     background: #ff1744;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 848px) {
     body {
         font-size: 14px;
     }
@@ -220,6 +266,12 @@ body {
         word-break: break-word;
         white-space: pre-wrap;
         letter-spacing: -1px;
+    }
+    #boot-output.boot-ascii .boot-banner-line {
+        font-size: 7px;
+    }
+    #boot-output.boot-ascii .boot-normal-line {
+        font-size: 14px;
     }
     #boot-prompt {
         font-size: 14px;
