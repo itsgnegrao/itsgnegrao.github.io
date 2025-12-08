@@ -60,7 +60,28 @@ function handleBootEnter(event) {
     }
 }
 
-window.addEventListener('load', () => {
+function showWelcomeModal() {
+    const popup = document.createElement('div');
+    popup.className = 'terminal-popup';
+    popup.innerHTML = `<div class='popup-content' style='display: flex; flex-direction: column; align-items: center; width: 50vw;'>
+        <p>Este ambiente funciona como meu portfólio/currículo interativo, e o terminal exibido é apenas uma simulação.
+        <br/>Utilize os comandos disponíveis para navegar pela interface em linha de comando.</p>
+        <p>Bem Vindo!</p>
+        <button class='popup-close'>OK</button>
+    </div>`;
+    document.body.appendChild(popup);
+    document.querySelector('.popup-close').onclick = () => {
+        popup.remove();
+        startBoot();
+    };
+}
+
+function startBoot() {
+    bootScreen.style.display = 'block';
     loadAscii();
     setTimeout(printBootLine, 1000);
+}
+
+window.addEventListener('load', () => {
+    showWelcomeModal();
 });
